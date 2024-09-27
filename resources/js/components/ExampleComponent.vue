@@ -1,11 +1,16 @@
 <template>
     <div>
-        <h1>こんにちは、Vueコンポーネントです！</h1>
+        <h1>Example Component</h1>
+        <button @click="goToInputDetail">Go to InputDetail</button>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'ExampleComponent',
+    methods: {
+        goToInputDetail() {
+            this.$router.push('/input-detail');  // ページ遷移を実行
+        }
+    }
 };
 </script>
