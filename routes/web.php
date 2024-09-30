@@ -1,15 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DataController;
+use App\Http\Controllers\DetailController;
+use App\Http\Controllers\MatchController;
 
 // Laravel のルート設定
+Route::post('/inputs/create', [DetailController::class, 'store']);
+Route::get('/dashboard', [MatchController::class, 'index']);
 
-// API 用のルートを /api にまとめる
-Route::prefix('api')->group(function () {
-    Route::get('/data', [DataController::class, 'index']);
-    Route::post('/data', [DataController::class, 'store']);
-});
+
 
 // Catch-all ルート: Vue.js のルートに対応する
 Route::get('/{any}', function () {
@@ -18,4 +17,4 @@ Route::get('/{any}', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
