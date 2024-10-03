@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import ExampleComponent from '../components/ExampleComponent.vue';
 import InputDetail from '../components/InputDetail.vue';
+import ShowDetail from '../components/ShowDetail.vue';
 
 const routes = [
     { path: '/app', component: ExampleComponent },
-    { path: '/input-detail', component: InputDetail },  // 新しいルートを追加
+    { path: '/input-detail', component: InputDetail },
+    { path: '/show-detail', component: ShowDetail },
 ];
 
 const router = createRouter({
