@@ -12,7 +12,8 @@ class DetailController extends Controller
      */
     public function index()
     {
-        //
+        $data = Detail::all();
+        return response()->json($data);
     }
 
     /**
