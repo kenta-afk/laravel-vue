@@ -28,8 +28,8 @@ async function submitDetail() {
         <p>This is the input detail component.</p>
     </div>
 
-    <form @submit.prevent="submitDetail"> <!-- preventでフォーム送信を防止 -->
+    <v-form @submit.prevent="submitDetail"> <!-- preventでフォーム送信を防止 -->
         <input type="text" v-model="inputText" placeholder="Enter some text"> <!-- v-modelでフォームデータをバインド -->
-        <button type="submit">送信</button> <!-- type="submit"を指定 -->
-    </form>
+        <v-btn type="submit">送信</v-btn> <!-- type="submit"を指定 -->
+    </v-form>
 </template>

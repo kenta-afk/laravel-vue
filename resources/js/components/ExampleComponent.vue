@@ -1,8 +1,8 @@
 <template>
     <div>
         <h1>Example Component</h1>
-        <button @click="goToInputDetail">Go to InputDetail</button>
-        <button @click="goToInputShowDetail">Go to ShowDetail</button>
+        <v-btn  @click="goToInputDetail">Go to InputDetail</v-btn>
+        <v-btn  @click="goToInputShowDetail">Go to ShowDetail</v-btn>
     </div>
 </template>
 
