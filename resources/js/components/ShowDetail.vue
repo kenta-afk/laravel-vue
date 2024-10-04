@@ -1,10 +1,18 @@
 <template>
-    <div>
-        <h1>Table Data</h1>
-        <ul>
-            <li v-for="item in detailData" :key="item.id">{{ item.detail }}</li> <!-- 適切なフィールドに変更 -->
-        </ul>
-    </div>
+  <v-container>
+    <v-card class="mx-auto my-4" max-width="600">
+      <v-card-title class="text-h5">Table Data</v-card-title>
+      <v-card-text>
+        <v-list>
+          <v-list-item v-for="item in detailData" :key="item.id">
+            <v-list-item-content>
+              <v-list-item-title>{{ item.detail }}</v-list-item-title> <!-- データを表示 -->
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-card-text>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
