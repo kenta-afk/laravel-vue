@@ -23,13 +23,20 @@ async function submitDetail() {
 </script>
 
 <template>
-    <div>
-        <h1>Input Detail Page</h1>
-        <p>This is the input detail component.</p>
-    </div>
-
-    <v-form @submit.prevent="submitDetail"> <!-- preventでフォーム送信を防止 -->
-        <input type="text" v-model="inputText" placeholder="Enter some text"> <!-- v-modelでフォームデータをバインド -->
-        <v-btn type="submit">送信</v-btn> <!-- type="submit"を指定 -->
+    <v-form @submit.prevent="submitDetail" v-model="valid">
+        <v-container>
+            <v-text-field
+              v-model="inputText"
+              :counter="30"
+              :rules="nameRules"
+              label="Greeting"
+              hide-details
+              required
+            ></v-text-field>
+            <v-btn type="submit">送信</v-btn> 
+        </v-container>
     </v-form>
+
+    
+   
 </template>
