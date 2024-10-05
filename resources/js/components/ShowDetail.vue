@@ -1,18 +1,22 @@
 <template>
+  
   <v-container>
-    <v-card class="mx-auto my-4" max-width="600">
-      <v-card-title class="text-h5">Table Data</v-card-title>
-      <v-card-text>
-        <v-list>
-          <v-list-item v-for="item in detailData" :key="item.id">
-            <v-list-item-content>
-              <v-list-item-title>{{ item.detail }}</v-list-item-title> <!-- データを表示 -->
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-card-text>
-    </v-card>
+    <v-table>
+      <thead>
+        <tr>
+          <th>
+            Greeting
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in detailData" :key="item.id">
+          <td>{{ item.detail }}</td>
+        </tr>
+      </tbody>
+    </v-table>
   </v-container>
+  
 </template>
 
 <script>
