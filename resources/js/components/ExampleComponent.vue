@@ -1,4 +1,5 @@
 <template>
+  <!--vuetifyで更新-->
   <v-app>
     <v-main>
       <v-container>
