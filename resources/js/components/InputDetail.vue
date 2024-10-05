@@ -23,7 +23,7 @@ async function submitDetail() {
 </script>
 
 <template>
-<!--vuetifyで更新-->
+
     <v-form @submit.prevent="submitDetail" v-model="valid">
         <v-container>
             <v-text-field

@@ -1,5 +1,5 @@
 <template>
-  <!--vuetifyで更新-->
+  
   <v-container>
     <v-table>
       <thead>
