@@ -69,8 +69,22 @@ class DetailController extends Controller
      */
     public function update(Request $request, Detail $detail)
     {
-        //
+    // バリデーションの実行
+    $request->validate([
+        'detail' => 'required|string|max:255',  // 'detail' フィールドの必須バリデーション
+    ]);
+
+    // データの更新
+    $detail->detail = $request->input('detail');  // リクエストから取得した'detail'をセット
+    $detail->save();  // データベースに保存
+
+    // 更新後のレスポンスを返す
+    return response()->json([
+        'message' => 'Detail updated successfully!',
+        'detail' => $detail
+    ], 200);
     }
+
 
     /**
      * Remove the specified resource from storage.

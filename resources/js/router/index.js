@@ -4,7 +4,7 @@ import InputDetail from '../components/InputDetail.vue';
 import ShowDetail from '../components/ShowDetail.vue';
 
 const routes = [
-    { path: '/app', component: ExampleComponent },
+    { path: '/', component: ExampleComponent },
     { path: '/input-detail', component: InputDetail },
     { path: '/show-detail', component: ShowDetail },
 ];

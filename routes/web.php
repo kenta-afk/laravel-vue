@@ -8,7 +8,7 @@ use App\Http\Controllers\MatchController;
 Route::post('/inputs/create', [DetailController::class, 'store']);
 Route::get('/dashboard', [MatchController::class, 'index']);
 Route::get('/inputs/index', [DetailController::class, 'index']);
-
+Route::put('/inputs/update/{detail}', [DetailController::class, 'update']);
 
 
 // Catch-all ルート: Vue.js のルートに対応する
