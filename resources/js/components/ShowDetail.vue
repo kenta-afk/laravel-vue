@@ -42,9 +42,9 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      detailData: [], // データを配列に修正
-      isDialogOpen: false, // ダイアログの開閉状態
-      editModel: {
+      detailData: [], // サーバーから取得するデータを保持するための配列
+      isDialogOpen: false, // ダイアログが開いているかどうかを管理するフラグ
+      editModel: { // 編集用のデータを保持するオブジェクト
         id: null,
         detail: ''
       }
