@@ -15,7 +15,7 @@ async function submitDetail() {
         });
         console.log(response.data); // レスポンスをコンソールに表示
 
-        router.push('/app');
+        router.push('/');
     } catch (error) {
         console.error(error); // エラーハンドリング
     }
